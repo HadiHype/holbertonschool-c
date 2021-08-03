@@ -4,7 +4,6 @@
 /**
  *main-print digit of base 10
  *Return: 0 (Success)
- *
  */
 int main(void)
 {
