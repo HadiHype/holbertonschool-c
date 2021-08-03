@@ -1,16 +1,16 @@
 #include <stdio.h>
-/* Project 5 */
+/* Project 6 */
 
 /**
- *main-print digit of base 10
+ *main- single digit numbers using putchar
  *Return: 0 (Success)
  */
 int main(void)
 {
-	int nb;
+	int i;
 
-	for (nb = 0; nb < 10; nb++)
-		putchar(nb + '0');
-	printf("\n");
+	for (i = 0; i < 10 ; i++)
+		putchar(i + '0');
+	putchar('\n');
 	return (0);
 }
