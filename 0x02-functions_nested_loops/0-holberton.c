@@ -6,18 +6,13 @@
  */
 int main(void)
 {
-	_putchar('H');
-	_putchar('o');
-	_putchar('l');
-	_putchar('b');
-	_putchar('e');
-	_putchar('r');
-	_putchar('t');
-	_putchar('o');
-	_putchar('n');
+	char holb[] = "Holberton";
+	int i;
 
+	for (i = 0; i <= 8; i++)
+	{
+		_putchar(holb[i]);
+	}
 	_putchar('\n');
-
-
 	return (0);
 }
