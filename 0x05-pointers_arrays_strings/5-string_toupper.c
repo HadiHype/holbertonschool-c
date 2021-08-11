@@ -1,8 +1,8 @@
 /**
- *string_toupper - capitalize everything! :P
- *@Ch: string
+ * string_toupper - changes all lowercase letters of a string to uppercase
+ * @Ch: string
  *
- *Return VOID
+ * Return: void
  */
 char *string_toupper(char *Ch)
 {
