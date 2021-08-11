@@ -10,7 +10,7 @@
 void print_number(int n)
 {
 	int i = 1;
-	numb = n;
+	int numb = n;
 
 	while (numb / 10)
 	{
