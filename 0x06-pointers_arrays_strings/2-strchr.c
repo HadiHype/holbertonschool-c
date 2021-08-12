@@ -5,6 +5,7 @@
  *
  *Return: char pointer
  */
+
 char *_strchr(char *s, char c)
 {
 	int index;
