@@ -5,7 +5,6 @@
  *
  *Return: char pointer
  */
-
 char *_strchr(char *s, char c)
 {
 	int index;
@@ -20,3 +19,4 @@ char *_strchr(char *s, char c)
 
 	return ('\0');
 }
+
