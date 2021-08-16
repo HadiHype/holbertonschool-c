@@ -1,4 +1,4 @@
-#inlucude "holberton.h"
+#include "holberton.h"
 
 /**
  * prime - check prime
@@ -8,12 +8,12 @@
  */
 int prime(int i, int j)
 {
-	else if (j % i == 0 || j < 2)
+	if (j % i == 0 || j < 2)
 		return (0);
 	else if (i == j - 1)
 		return (1);
 	else if (j > i)
-		return (checker(i + 1, j));
+		return (prime(i + 1, j));
 	return (1);
 }
 /**
@@ -24,5 +24,5 @@ int prime(int i, int j)
  */
 int is_prime_number(int n)
 {
-	return (prime_found(2, n));
+	return (prime(2, n));
 }
