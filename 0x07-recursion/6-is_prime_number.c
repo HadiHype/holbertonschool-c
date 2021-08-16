@@ -12,8 +12,8 @@ int prime(int i, int j)
 		return (0);
 	else if (i == j - 1)
 		return (1);
-	else if (base > n)
-		return (checker(n + 1, base));
+	else if (j > i)
+		return (checker(i + 1, j));
 	return (1);
 }
 /**
