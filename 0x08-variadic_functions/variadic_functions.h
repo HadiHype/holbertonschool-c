@@ -1,21 +1,19 @@
 #ifndef VARIADIC_FUNCTIONS
 #define VARIADIC_FUNCTIONS
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdarg.h>
-
 /**
- * struct printer - struct to print
- * @symbol: Datatype
- * @print: Function that prints all
- *
+ * struct print_all - prints anything
+ * @all: arguments
+ * @func: pointer to the functions that prints all
  */
-typedef struct print
+typedef struct print_all
 {
-	char *symbol;
-	void (*print)(va_list arg);
+	char all;
+	void (*func)(va_list arguments);
+} simbol_t;
 
-} print_t;
-
-int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
