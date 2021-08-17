@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  *print_numbers - print all numbers
- *@seperator: seperates the numbers
+ *@separator: separates the numbers
  *@n: arguments
  *
  *Return: void
@@ -19,8 +19,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		printf("%d", va_arg(arguments, int));
 
-		if (x != (n - 1) && seperator != NULL)
-			printf("%s", seperator);
+		if (x != (n - 1) && separator != NULL)
+			printf("%s", separator);
 	}
 	printf("\n");
 	va_end(arguments);
