@@ -1,3 +1,6 @@
+#include "holberton.h"
+#include <stdlib.h>
+
 /**
  *create_array- creating an array of initialized chars
  *@size: size of array
@@ -12,10 +15,14 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 		return (NULL);
+
 	x = malloc(size * sizeof(char));
+
 	if (x == NULL)
 		return (NULL);
-	for (y = 0; i < size; i++)
-		x[i] = c;
+
+	for (y = 0; y < size; y++)
+		x[y] = c;
+
 	return (x);
 }
