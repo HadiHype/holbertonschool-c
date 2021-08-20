@@ -1,9 +1,9 @@
 /**
- *create_array - creating an array of chars and initialize it
+ *create_array- creating an array of initialized chars
  *@size: size of array
  *@c: initialized char
  *
- *
+ *Return: char
  */
 char *create_array(unsigned int size, char c)
 {
