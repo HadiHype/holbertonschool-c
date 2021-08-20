@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- *strdup - copy of the string
+ *_strdup - copy of the string
  *@str: the string
  *
  *
