@@ -1,19 +1,34 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
+
 /**
- * _realloc - Function that give new space of memory.
- * @ptr: Oldpointer that will be change.
- * @new_size: New size.
- * @old_size: Old size.
- * Return: Return NULL or the new pointer to the space of memory.
- **/
+ * _realloc - reallocates a memory block using malloc and free.
+ * @ptr: pointer to the array we want to reallocates its size
+ * @old_size: integer represents the old size of @ptr.
+ * @new_size: integer represents the new size of @ptr.
+ *
+ * Return: On success, Return a pointer to the array with new size.
+ *          On error, NULL.
+ */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *p;
+	unsigned int i;
+	void *newPtr;
+	char *arr1;
+	char *arr2;
 
 	if (new_size == old_size)
 		return (ptr);
+
+	if (ptr == NULL)
+	{
+		newPtr = malloc(new_size);
+
+		if (newPtr == NULL)
+			return (NULL);
+
+		return (newPtr);
+	}
 
 	if (new_size == 0 && ptr != NULL)
 	{
@@ -21,47 +36,20 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 
-	if (ptr == NULL)
-	{
-		p = malloc(new_size);
-		if (p == NULL)
-		{
-			free(ptr);
-			return (NULL);
-		}
-		free(ptr);
-		return (p);
-	}
+	arr1 = ptr;
+	newPtr = malloc(sizeof(*arr1) * new_size);
 
-	p = malloc(new_size);
-	if (p == NULL)
+	if (newPtr == NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
 
-	if (new_size > old_size)
-		_memcpy(p, ptr, old_size);
+	arr2 = newPtr;
+
+	for (i = 0; i < old_size && i < new_size; i++)
+		arr2[i] = *arr1++;
+
 	free(ptr);
-	return (p);
-}
-
-/**
- * _memcpy - Function the copy momery from source to destiny - n bytes.
- * @dest: Dest for the data.
- * @src: Source of the data to be copy.
- * @n: N bytes to be copy.
- * Return: Copy of the old momery on new pointer.
- **/
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-	int i;
-
-	for (i = 0; n > 0; i++, n--)
-	{
-
-		dest[i] = src[i];
-	}
-
-	return (dest);
+	return (newPtr);
 }
