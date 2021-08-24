@@ -1,1 +1,2 @@
-Static Library Project
+# 0x80. C - Static libraries
+
