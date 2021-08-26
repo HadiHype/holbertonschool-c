@@ -24,7 +24,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[x].op && strcmp(ops[x].op, s) != 0)
 		x++;
-	return (ops[i].f);
+	return (ops[x].f);
 
 	printf("Error\n");
 	exit(99);
