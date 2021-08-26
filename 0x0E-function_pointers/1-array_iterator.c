@@ -1,3 +1,6 @@
+#include <stddef.h>
+#include "function_pointers.h"
+
 /**
  * array_iterator - function with two arguments
  * @array: za array
