@@ -1,11 +1,10 @@
-#include <stdio.h>
 /**
- *print_name - print name function
- *@name: name of person
- *@f: function to print char
+ * print_name - function with two arguments
+ * @name: char type pointer to string
+ * @f: pointer to a function
  *
- *Description: print the name bruv
- *Return: void
+ * Description: prints a name using function pointers
+ * Return: void
  */
 void print_name(char *name, void (*f)(char *))
 {
